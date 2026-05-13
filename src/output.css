@@ -5,54 +5,16 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-800: oklch(44.4% 0.177 26.899);
-    --color-emerald-800: oklch(43.2% 0.095 166.913);
-    --color-sky-800: oklch(44.3% 0.11 240.79);
-    --color-blue-200: oklch(88.2% 0.059 254.128);
-    --color-blue-700: oklch(48.8% 0.243 264.376);
-    --color-blue-800: oklch(42.4% 0.199 265.638);
-    --color-blue-900: oklch(37.9% 0.146 265.522);
-    --color-indigo-950: oklch(25.7% 0.09 281.288);
-    --color-violet-800: oklch(43.2% 0.232 292.759);
-    --color-slate-800: oklch(27.9% 0.041 260.031);
-    --color-slate-900: oklch(20.8% 0.042 265.755);
-    --color-slate-950: oklch(12.9% 0.042 264.695);
-    --color-zinc-800: oklch(27.4% 0.006 286.033);
-    --color-zinc-900: oklch(21% 0.006 285.885);
-    --color-zinc-950: oklch(14.1% 0.005 285.823);
     --color-neutral-50: oklch(98.5% 0 0);
-    --color-neutral-100: oklch(97% 0 0);
     --color-neutral-200: oklch(92.2% 0 0);
-    --color-neutral-500: oklch(55.6% 0 0);
-    --color-neutral-700: oklch(37.1% 0 0);
-    --color-neutral-800: oklch(26.9% 0 0);
-    --color-neutral-900: oklch(20.5% 0 0);
-    --color-mauve-800: oklch(26.3% 0.024 320.12);
-    --color-mauve-900: oklch(21.2% 0.019 322.12);
-    --color-olive-800: oklch(28.6% 0.016 107.4);
-    --color-olive-900: oklch(22.8% 0.013 107.4);
-    --color-mist-800: oklch(27.5% 0.011 216.9);
     --spacing: 0.25rem;
-    --container-sm: 24rem;
-    --container-xl: 36rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --font-weight-bold: 700;
     --radius-sm: 0.25rem;
-    --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -218,53 +180,11 @@
   .sticky {
     position: sticky;
   }
-  .inset-18 {
-    inset: calc(var(--spacing) * 18);
-  }
   .inset-20 {
     inset: calc(var(--spacing) * 20);
   }
-  .inset-50 {
-    inset: calc(var(--spacing) * 50);
-  }
-  .inset-auto {
-    inset: auto;
-  }
-  .inset-x-1 {
-    inset-inline: calc(var(--spacing) * 1);
-  }
-  .inset-x-1\/2 {
-    inset-inline: calc(1 / 2 * 100%);
-  }
-  .inset-x-1\/4 {
-    inset-inline: calc(1 / 4 * 100%);
-  }
-  .inset-x-1\/5 {
-    inset-inline: calc(1 / 5 * 100%);
-  }
-  .inset-x-40 {
-    inset-inline: calc(var(--spacing) * 40);
-  }
-  .inset-y-40 {
-    inset-block: calc(var(--spacing) * 40);
-  }
-  .inset-s-40 {
-    inset-inline-start: calc(var(--spacing) * 40);
-  }
   .inset-s-60 {
     inset-inline-start: calc(var(--spacing) * 60);
-  }
-  .inset-e-40 {
-    inset-inline-end: calc(var(--spacing) * 40);
-  }
-  .inset-e-60 {
-    inset-inline-end: calc(var(--spacing) * 60);
-  }
-  .inset-e-80 {
-    inset-inline-end: calc(var(--spacing) * 80);
-  }
-  .inset-e-90 {
-    inset-inline-end: calc(var(--spacing) * 90);
   }
   .inset-e-100 {
     inset-inline-end: calc(var(--spacing) * 100);
@@ -296,9 +216,6 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
-  .min-h-screen {
-    min-height: 100vh;
-  }
   .max-w-1 {
     max-width: calc(var(--spacing) * 1);
   }
@@ -311,17 +228,8 @@
   .resize {
     resize: both;
   }
-  .flex-row {
-    flex-direction: row;
-  }
   .items-center {
     align-items: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
-  }
-  .justify-start {
-    justify-content: flex-start;
   }
   .space-x-5 {
     :where(& > :not(:last-child)) {
@@ -329,15 +237,6 @@
       margin-inline-start: calc(calc(var(--spacing) * 5) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-x-reverse)));
     }
-  }
-  .overflow-auto {
-    overflow: auto;
-  }
-  .overflow-y-auto {
-    overflow-y: auto;
-  }
-  .overscroll-auto {
-    overscroll-behavior: auto;
   }
   .rounded-br-sm {
     border-bottom-right-radius: var(--radius-sm);
@@ -349,8 +248,11 @@
   .bg-\[\#1c1b19\] {
     background-color: #1c1b19;
   }
-  .p-140 {
-    padding: calc(var(--spacing) * 140);
+  .p-20 {
+    padding: calc(var(--spacing) * 20);
+  }
+  .p-60 {
+    padding: calc(var(--spacing) * 60);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -358,35 +260,47 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .pe-60 {
-    padding-inline-end: calc(var(--spacing) * 60);
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
   }
-  .pe-80 {
-    padding-inline-end: calc(var(--spacing) * 80);
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
   }
-  .pe-100 {
-    padding-inline-end: calc(var(--spacing) * 100);
+  .pt-3\.5 {
+    padding-top: calc(var(--spacing) * 3.5);
   }
-  .pe-140 {
-    padding-inline-end: calc(var(--spacing) * 140);
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-4\.5 {
+    padding-top: calc(var(--spacing) * 4.5);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-14 {
+    padding-top: calc(var(--spacing) * 14);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
-  .pr-15 {
-    padding-right: calc(var(--spacing) * 15);
-  }
-  .pr-20 {
-    padding-right: calc(var(--spacing) * 20);
-  }
-  .pl-10 {
-    padding-left: calc(var(--spacing) * 10);
+  .pr-100 {
+    padding-right: calc(var(--spacing) * 100);
   }
   .pl-15 {
     padding-left: calc(var(--spacing) * 15);
   }
-  .pl-20 {
-    padding-left: calc(var(--spacing) * 20);
+  .pl-60 {
+    padding-left: calc(var(--spacing) * 60);
+  }
+  .pl-80 {
+    padding-left: calc(var(--spacing) * 80);
   }
   .font-mono {
     font-family: var(--font-mono);
